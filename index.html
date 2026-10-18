@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Pachón | Ingeniero de Software</title>
+  <meta name="description" content="Portafolio de José Pachón, ingeniero de software en Colombia. Desarrollo de soluciones empresariales: CMS, CRM, ERP e inventarios con Spring Boot, FastAPI y bases de datos relacionales.">
+  <meta name="author" content="José Pachón">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <!-- Open Graph  (vista previa al compartir)-->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="José Pachón | Ingeniero de Software">
+  <meta property="og:description" content="Soluciones empresariales a la medida: CMS, CRM, ERP e inventarios.">
+  <meta property="og:image" content="https://josepachonlondono-cell.github.io/miportafolio/assets/images/jose-pachon.png">
+  <meta property="og:url" content="https://josepachonlondono-cell.github.io/miportafolio/">
+  <meta property="og:locale" content="es_CO">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+
+  <!--   Hojas de estilo en   orden de cascada -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Aplica el tema antes de pintar  para evitar parpadeo  -->
+  <script>
+    (function () {
+      var raiz = document.documentElement;
+      raiz.classList.add("js");
+      try {
+        var tema = localStorage.getItem("tema");
+        if (!tema) {
+          tema = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        raiz.setAttribute("data-theme", tema);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/form-handler.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body>
+
+  <!--Iconos reutilizables   (sprite)  -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3c5 0 9 3.6 9 8s-4 8-9 8c-1.2 0-2.3-.2-3.3-.5L4 20l1.3-3.7C3.9 14.9 3 13 3 11c0-4.4 4-8 9-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="11" r="1.1" fill="currentColor"/><circle cx="12" cy="11" r="1.1" fill="currentColor"/><circle cx="15.5" cy="11" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-luna" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-correo" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-codigo" viewBox="0 0 24 24"><circle cx="7" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 7.2v9.6M17 11.2c0 4-4 4-8.4 6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-ubicacion" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-arriba" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <a class="saltar-contenido" href="#contenido" data-i18n="a11y.saltar">Saltar al contenido</a>
+
+  <!--   ENCABEZADO-->
+  <header class="header" id="header">
+    <div class="header__inner contenedor">
+      <a href="#inicio" class="logo" aria-label="José Pachón, ir al inicio">
+        <img src="assets/icons/logo.svg" alt="" width="48" height="48">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__lista" id="nav-lista">
+          <li><a href="#inicio" class="nav__enlace" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__enlace" data-i18n="nav.sobre">Sobre mí</a></li>
+          <li><a href="#proyectos" class="nav__enlace" data-i18n="nav.proyectos">Proyectos</a></li>
+          <li><a href="#contacto" class="nav__enlace" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__acciones">
+        <button type="button" class="btn-icono btn-idioma" id="btn-idioma" aria-label="Cambiar idioma a inglés">
+          <span class="btn-idioma__op" data-lang="es">ES</span>
+          <span class="btn-idioma__op" data-lang="en">EN</span>
+        </button>
+        <button type="button" class="btn-icono" id="btn-tema" aria-label="Activar tema oscuro">
+          <svg class="icono icono--sol" aria-hidden="true"><use href="#i-sol"/></svg>
+          <svg class="icono icono--luna" aria-hidden="true"><use href="#i-luna"/></svg>
+        </button>
+        <a href="#contacto" class="btn btn--contorno header__cta">
+          <svg class="icono" aria-hidden="true"><use href="#i-chat"/></svg>
+          <span data-i18n="nav.cta">Hablemos</span>
+        </a>
+        <button type="button" class="btn-icono btn-menu" id="btn-menu" aria-expanded="false" aria-controls="nav-lista" aria-label="Abrir menú">
+          <svg class="icono icono--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icono icono--cerrar" aria-hidden="true"><use href="#i-cerrar"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!--   HERO     / PRESENTACION  -->
+    <section id="inicio" class="hero contenedor" aria-labelledby="hero-titulo">
+      <div class="hero__tarjeta">
+        <div class="hero__texto">
+          <p class="hero__saludo" data-i18n="hero.saludo">Hola 👋 soy José Pachón</p>
+          <h1 id="hero-titulo" class="hero__titulo" data-i18n="hero.titulo">Ingeniero de Software</h1>
+          <a href="#contacto" class="btn btn--primario" data-i18n="hero.cta">Contrátame</a>
+          <p class="hero__descripcion" data-i18n="hero.descripcion">Desarrollo soluciones empresariales a la medida desde Colombia: CMS, CRM, ERP e inventarios que simplifican la operación.</p>
+        </div>
+
+        <figure class="hero__foto">
+          <picture>
+            <source srcset="assets/images/jose-pachon.webp" type="image/webp">
+            <img src="assets/images/jose-pachon.png" alt="Fotografía de José Pachón" width="1100" height="944" fetchpriority="high">
+          </picture>
+        </figure>
+
+        <aside class="hero__exp" aria-labelledby="exp-titulo">
+          <p id="exp-titulo" class="hero__exp-titulo" data-i18n="hero.exp">EXP en:</p>
+          <ul class="hero__exp-lista">
+            <li><img src="assets/icons/tech/spring.svg" alt="Spring Boot" title="Spring Boot" width="24" height="24"></li>
+            <li><img src="assets/icons/tech/fastapi.svg" alt="FastAPI" title="FastAPI" width="24" height="24"></li>
+            <li><img src="assets/icons/tech/oracle.svg" alt="Oracle" title="Oracle" width="24" height="24"></li>
+            <li><img src="assets/icons/tech/postgres.svg" alt="PostgreSQL" title="PostgreSQL" width="24" height="24"></li>
+            <li><img src="assets/icons/tech/mysql.svg" alt="MySQL" title="MySQL" width="24" height="24"></li>
+          </ul>
+        </aside>
+
+        <ul class="hero__stats">
+          <li class="stat">
+            <span class="stat__numero"><span data-contador="2">2</span>+</span>
+            <span class="stat__etiqueta" data-i18n="hero.stat1">Años de experiencia</span>
+          </li>
+          <li class="stat">
+            <span class="stat__numero"><span data-contador="11">11</span>+</span>
+            <span class="stat__etiqueta" data-i18n="hero.stat2">Proyectos</span>
+          </li>
+          <li class="stat">
+            <span class="stat__numero"><span data-contador="9">9</span>+</span>
+            <span class="stat__etiqueta" data-i18n="hero.stat3">Clientes</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOBRE MI  -->
+    <section id="sobre-mi" class="sobre contenedor" aria-labelledby="sobre-titulo" data-revelar>
+      <p class="sobre__estado">
+        <span class="sobre__punto" aria-hidden="true"></span>
+        <span data-i18n="sobre.estado">Disponible para trabajar</span>
+      </p>
+      <div class="sobre__contenido">
+        <h2 id="sobre-titulo" class="sr-only" data-i18n="sobre.titulo">Sobre mí</h2>
+        <p class="sobre__texto" id="sobre-texto" data-i18n="sobre.texto">¡Bienvenido a mi portafolio! Soy José Pachón, ingeniero de software organizado, enfocado y apasionado por la tecnología y la innovación. Diseño y desarrollo soluciones empresariales que convierten procesos complejos en herramientas claras y eficientes. Asumo cada reto con sentido de pertenencia, aprendo rápido y trabajo orientado a cumplir las metas de cada proyecto.</p>
+        <a href="#proyectos" class="enlace-flecha">
+          <span data-i18n="sobre.enlace">Ver mis proyectos</span>
+          <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!--  PROYECTOS (se cargan desde  data.js)-->
+    <section id="proyectos" class="proyectos contenedor" aria-labelledby="proyectos-titulo">
+      <div class="seccion__cabecera" data-revelar>
+        <p class="etiqueta" data-i18n="proyectos.etiqueta">Portafolio</p>
+        <h2 id="proyectos-titulo" class="seccion__titulo" data-i18n="proyectos.titulo">Proyectos destacados</h2>
+      </div>
+      <div class="proyectos__lista" id="proyectos-lista"></div>
+      <noscript><p class="aviso">Activa JavaScript para ver el detalle de los proyectos.</p></noscript>
+    </section>
+
+    <!--   TECNOLOGIAS Y   HABILIDADES -->
+    <section id="habilidades" class="habilidades" aria-labelledby="habilidades-titulo">
+      <div class="habilidades__inner contenedor">
+        <p class="etiqueta etiqueta--acento habilidades__etiqueta" data-i18n="habilidades.etiqueta">Tecnologías y habilidades</p>
+        <div class="habilidades__cabecera" data-revelar>
+          <h2 id="habilidades-titulo" class="seccion__titulo" data-i18n="habilidades.titulo">Herramientas con las que construyo</h2>
+          <div class="habilidades__texto">
+            <p data-i18n="habilidades.texto">Siempre abierto a nuevas oportunidades y conversaciones. Escríbeme y hablemos de tus ideas o proyectos.</p>
+            <a href="#contacto" class="enlace-flecha enlace-flecha--acento">
+              <span data-i18n="habilidades.enlace">Hablemos</span>
+              <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+            </a>
+          </div>
+        </div>
+        <ul class="habilidades__grid" id="habilidades-grid"></ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO-->
+    <section id="contacto" class="contacto contenedor" aria-labelledby="contacto-titulo">
+      <div class="contacto__intro" data-revelar>
+        <p class="etiqueta" data-i18n="contacto.etiqueta">Contacto</p>
+        <h2 id="contacto-titulo" class="seccion__titulo" data-i18n="contacto.titulo">¿Tienes un proyecto en mente?</h2>
+        <p class="contacto__texto" data-i18n="contacto.texto">Cuéntame tu idea y te respondo en menos de 24 horas.</p>
+        <ul class="contacto__datos">
+          <li>
+            <a href="mailto:jose.pachon@hotmail.com">
+              <svg class="icono" aria-hidden="true"><use href="#i-correo"/></svg>
+              jose.pachon@hotmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/josepachonlondono-cell" target="_blank" rel="noopener noreferrer">
+              <svg class="icono" aria-hidden="true"><use href="#i-codigo"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ismux.com/" target="_blank" rel="noopener noreferrer">
+              <svg class="icono" aria-hidden="true"><use href="#i-web"/></svg>
+              ismux.com
+            </a>
+          </li>
+          <li>
+            <svg class="icono" aria-hidden="true"><use href="#i-ubicacion"/></svg>
+            Colombia
+          </li>
+        </ul>
+      </div>
+
+      <form class="formulario" id="form-contacto" action="#" method="post" data-revelar>
+        <div class="campo">
+          <label for="nombre" data-i18n="form.nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3" maxlength="60" placeholder="Tu nombre" data-i18n-placeholder="form.nombrePh" aria-describedby="nombre-error">
+          <p class="campo__error" id="nombre-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="correo" data-i18n="form.correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" required maxlength="80" placeholder="usuario@ejemplo.com" aria-describedby="correo-error">
+          <p class="campo__error" id="correo-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="telefono"><span data-i18n="form.telefono">Teléfono</span> <span class="campo__opcional" data-i18n="form.opcional">(opcional)</span></label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9 +]{7,20}" maxlength="20" placeholder="+57 300 000 0000" aria-describedby="telefono-error">
+          <p class="campo__error" id="telefono-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="asunto" data-i18n="form.asunto">Asunto</label>
+          <select id="asunto" name="asunto" required aria-describedby="asunto-error">
+            <option value="" data-i18n="form.asuntoPh">Selecciona una opción…</option>
+            <option value="proyecto" data-i18n="form.op1">Desarrollo de un proyecto</option>
+            <option value="consultoria" data-i18n="form.op2">Consultoría técnica</option>
+            <option value="empleo" data-i18n="form.op3">Oferta laboral</option>
+            <option value="otro" data-i18n="form.op4">Otro</option>
+          </select>
+          <p class="campo__error" id="asunto-error"></p>
+        </div>
+
+        <div class="campo campo--completo">
+          <label for="mensaje" data-i18n="form.mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required minlength="20" maxlength="500" placeholder="Cuéntame sobre tu proyecto…" data-i18n-placeholder="form.mensajePh" aria-describedby="mensaje-error mensaje-contador"></textarea>
+          <div class="campo__pie">
+            <p class="campo__error" id="mensaje-error"></p>
+            <span class="campo__contador" id="mensaje-contador" aria-live="polite">0/500</span>
+          </div>
+        </div>
+
+        <div class="formulario__acciones campo--completo">
+          <button type="submit" class="btn btn--oscuro" id="btn-enviar">
+            <span data-i18n="form.enviar">Enviar mensaje</span>
+            <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+          </button>
+          <p class="formulario__estado" id="form-estado" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!--   PIE DE     PAGINA  -->
+  <footer class="footer">
+    <div class="footer__inner contenedor">
+      <a href="#inicio" class="footer__marca" aria-label="José Pachón, ir al inicio">
+        <img src="assets/icons/logo.svg" alt="" width="36" height="36">
+        <span>José Pachón</span>
+      </a>
+      <p class="footer__texto">
+        © <span id="anio">2026</span> José Pachón.
+        <span data-i18n="footer.texto">Hecho con HTML5, CSS3 y JavaScript.</span>
+      </p>
+      <ul class="footer__redes">
+        <li><a href="mailto:jose.pachon@hotmail.com" class="btn-icono" aria-label="Correo electrónico"><svg class="icono" aria-hidden="true"><use href="#i-correo"/></svg></a></li>
+        <li><a href="https://github.com/josepachonlondono-cell" class="btn-icono" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icono" aria-hidden="true"><use href="#i-codigo"/></svg></a></li>
+        <li><a href="https://www.ismux.com/" class="btn-icono" target="_blank" rel="noopener noreferrer" aria-label="Sitio web ismux.com"><svg class="icono" aria-hidden="true"><use href="#i-web"/></svg></a></li>
+        <li><a href="#inicio" class="btn-icono btn-icono--acento" aria-label="Volver arriba" data-i18n-aria="footer.arriba"><svg class="icono" aria-hidden="true"><use href="#i-arriba"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
