@@ -1,6 +1,4 @@
-/* ==========================================
-   Reset   moderno
-   ========================================== */
+/* Reset     moderno*/
 
 *,
 *::before,
@@ -31,7 +29,7 @@ video {
   height: auto;
 }
 
-/* los contRoles heredan la fuente */
+/*   los   contRoles heredan la fuente     */
 input,
 button,
 textarea,
@@ -68,7 +66,7 @@ textarea {
   resize: vertical;
 }
 
-/* Solo para lectores de pantala */
+/*   Solo para  lectores de pantala*/
 .sr-only {
   position: absolute;
   width: 1px;

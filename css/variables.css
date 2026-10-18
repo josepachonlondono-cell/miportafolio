@@ -1,9 +1,7 @@
-/* ==========================================
-   Variables   - Guia de estilos
-   ========================================== */
+/*   Variables   - Guia de estilos*/
 
 :root {
-  /* Paleta  base */
+  /*   Paleta   base  */
   --color-negro: #0b0b0b;
   --color-lima: #c6f432;
   --color-lima-oscuro: #a9d61a;
@@ -16,7 +14,7 @@
   --color-error: #e5484d;
   --color-exito: #30a46c;
 
-  /* Tokens de tema (claro) */
+  /* Tokens de tema (claro)  */
   --color-fondo: var(--color-blanco);
   --color-superficie: #ffffff;
   --color-texto: var(--color-negro);
@@ -30,7 +28,7 @@
   --color-panel-borde: var(--color-gris-700);
   --color-chip: var(--color-gris-100);
 
-  /* Tipografia */
+  /* Tipografia*/
   --fuente-principal: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --peso-regular: 400;
   --peso-medio: 500;
@@ -44,7 +42,7 @@
   --texto-2xl: clamp(2rem, 1.5rem + 2vw, 3rem);
   --texto-hero: clamp(2.75rem, 1.6rem + 5vw, 6rem);
 
-  /* EspAciado */
+  /* EspAciado*/
   --espacio-1: 0.25rem;
   --espacio-2: 0.5rem;
   --espacio-3: 0.75rem;
@@ -55,19 +53,19 @@
   --espacio-16: 4rem;
   --espacio-24: 6rem;
 
-  /* Bordes */
+  /*   Bordes     */
   --radio-sm: 0.75rem;
   --radio-md: 1.25rem;
   --radio-lg: 2rem;
   --radio-pildora: 999px;
 
-  /* Sombras y transiciones */
+  /*   Sombras y transiciones     */
   --sombra-suave: 0 8px 24px rgb(0 0 0 / 0.06);
   --sombra-acento: 0 0 0 4px rgb(198 244 50 / 0.35);
   --transicion-rapida: 0.2s ease;
   --transicion-media: 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 
-  /* Layout */
+  /*   Layout     */
   --ancho-max: 1280px;
   --alto-header: 4.5rem;
   --margen-lateral: clamp(1rem, 4vw, 2rem);
@@ -75,7 +73,7 @@
   color-scheme: light;
 }
 
-/* Tema   oscuro */
+/* Tema   oscuro  */
 :root[data-theme="dark"] {
   --color-fondo: var(--color-negro);
   --color-superficie: #121212;
@@ -91,9 +89,4 @@
   color-scheme: dark;
 }
 
-/*
-  Breakpoints (referencia, no se pueden usar en @media):
-  movil   < 768px
-  tablet  >= 768px
-  desktop >= 1024px
-*/
+/*  Breakpoints: movil <   768px, tablet >= 768px, desktop >= 1024px */
