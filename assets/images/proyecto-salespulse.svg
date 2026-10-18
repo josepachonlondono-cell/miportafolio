@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="DM Sans, Segoe UI, sans-serif">
+  <title>Mockup del dashboard SalesPulse</title>
+  <defs>
+    <linearGradient id="sp-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ededeb"/>
+      <stop offset="1" stop-color="#d9dcd2"/>
+    </linearGradient>
+    <linearGradient id="sp-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c6f432" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c6f432" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sp-fondo)"/>
+
+  <!-- Ventana -->
+  <rect x="70" y="70" width="1060" height="660" rx="28" fill="#ffffff" stroke="#cfcfcb"/>
+  <rect x="70" y="70" width="230" height="660" rx="28" fill="#0b0b0b"/>
+  <rect x="270" y="70" width="30" height="660" fill="#0b0b0b"/>
+
+  <!-- Menu lateral -->
+  <circle cx="114" cy="122" r="18" fill="#c6f432"/>
+  <text x="142" y="129" fill="#f7f7f5" font-size="19" font-weight="700">SalesPulse</text>
+  <rect x="96" y="172" width="180" height="42" rx="21" fill="#c6f432"/>
+  <text x="122" y="199" fill="#0b0b0b" font-size="15" font-weight="700">Resumen</text>
+  <g fill="#8a8a86" font-size="15">
+    <text x="122" y="256">Ventas</text>
+    <text x="122" y="300">Productos</text>
+    <text x="122" y="344">Regiones</text>
+    <text x="122" y="388">Reportes</text>
+  </g>
+
+  <!-- KPIs -->
+  <g font-size="14">
+    <rect x="330" y="104" width="182" height="112" rx="18" fill="#f7f7f5"/>
+    <text x="352" y="138" fill="#5f5f5b">Ingresos</text>
+    <text x="352" y="184" fill="#0b0b0b" font-size="30" font-weight="700">$84.2M</text>
+
+    <rect x="526" y="104" width="182" height="112" rx="18" fill="#f7f7f5"/>
+    <text x="548" y="138" fill="#5f5f5b">Pedidos</text>
+    <text x="548" y="184" fill="#0b0b0b" font-size="30" font-weight="700">3,418</text>
+
+    <rect x="722" y="104" width="182" height="112" rx="18" fill="#f7f7f5"/>
+    <text x="744" y="138" fill="#5f5f5b">Ticket prom.</text>
+    <text x="744" y="184" fill="#0b0b0b" font-size="30" font-weight="700">$24.6k</text>
+
+    <rect x="918" y="104" width="182" height="112" rx="18" fill="#0b0b0b"/>
+    <text x="940" y="138" fill="#8a8a86">Crecimiento</text>
+    <text x="940" y="184" fill="#c6f432" font-size="30" font-weight="700">+18%</text>
+  </g>
+
+  <!-- Grafico de linea -->
+  <rect x="330" y="236" width="574" height="300" rx="18" fill="#f7f7f5"/>
+  <text x="354" y="272" fill="#0b0b0b" font-size="17" font-weight="700">Ventas mensuales</text>
+  <g stroke="#e2e2de" stroke-width="1">
+    <line x1="354" y1="330" x2="880" y2="330"/>
+    <line x1="354" y1="390" x2="880" y2="390"/>
+    <line x1="354" y1="450" x2="880" y2="450"/>
+    <line x1="354" y1="510" x2="880" y2="510"/>
+  </g>
+  <path d="M354 470 L420 440 L486 455 L552 400 L618 410 L684 360 L750 375 L816 320 L880 300 L880 510 L354 510 Z" fill="url(#sp-area)"/>
+  <path d="M354 470 L420 440 L486 455 L552 400 L618 410 L684 360 L750 375 L816 320 L880 300" fill="none" stroke="#0b0b0b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="816" cy="320" r="8" fill="#c6f432" stroke="#0b0b0b" stroke-width="3"/>
+
+  <!-- Dona -->
+  <rect x="918" y="236" width="182" height="300" rx="18" fill="#f7f7f5"/>
+  <text x="940" y="272" fill="#0b0b0b" font-size="17" font-weight="700">Canales</text>
+  <g transform="translate(1009 400)" fill="none" stroke-width="26">
+    <circle r="58" stroke="#e2e2de"/>
+    <circle r="58" stroke="#0b0b0b" stroke-dasharray="200 365" transform="rotate(-90)"/>
+    <circle r="58" stroke="#c6f432" stroke-dasharray="110 365" stroke-dashoffset="-200" transform="rotate(-90)"/>
+  </g>
+  <text x="1009" y="408" fill="#0b0b0b" font-size="20" font-weight="700" text-anchor="middle">62%</text>
+
+  <!-- Barras -->
+  <rect x="330" y="556" width="770" height="150" rx="18" fill="#f7f7f5"/>
+  <g>
+    <rect x="560" y="574" width="500" height="18" rx="9" fill="#e2e2de"/>
+    <rect x="560" y="574" width="420" height="18" rx="9" fill="#0b0b0b"/>
+    <rect x="560" y="608" width="500" height="18" rx="9" fill="#e2e2de"/>
+    <rect x="560" y="608" width="330" height="18" rx="9" fill="#c6f432"/>
+    <rect x="560" y="642" width="500" height="18" rx="9" fill="#e2e2de"/>
+    <rect x="560" y="642" width="240" height="18" rx="9" fill="#8a8a86"/>
+    <rect x="560" y="676" width="500" height="18" rx="9" fill="#e2e2de"/>
+    <rect x="560" y="676" width="150" height="18" rx="9" fill="#cfcfcb"/>
+  </g>
+  <g fill="#5f5f5b" font-size="13">
+    <text x="354" y="588">Antioquia</text>
+    <text x="354" y="622">Cundinamarca</text>
+    <text x="354" y="656">Valle del Cauca</text>
+    <text x="354" y="690">Atlántico</text>
+  </g>
+</svg>

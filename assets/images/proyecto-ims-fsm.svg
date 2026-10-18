@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="DM Sans, Segoe UI, sans-serif">
+  <title>Mockup ilustrativo del sistema IMS + FSM</title>
+  <defs>
+    <radialGradient id="ims-fondo" cx="0.75" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#1f2a0a"/>
+      <stop offset="1" stop-color="#0b0b0b"/>
+    </radialGradient>
+    <pattern id="ims-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#222" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#ims-fondo)"/>
+
+  <!-- Ventana -->
+  <rect x="70" y="70" width="1060" height="660" rx="28" fill="#141414" stroke="#2f2f2f"/>
+  <circle cx="108" cy="104" r="7" fill="#3a3a3a"/>
+  <circle cx="132" cy="104" r="7" fill="#3a3a3a"/>
+  <circle cx="156" cy="104" r="7" fill="#c6f432"/>
+  <rect x="440" y="92" width="320" height="24" rx="12" fill="#1f1f1f"/>
+  <text x="600" y="109" fill="#8a8a86" font-size="13" text-anchor="middle">ims-fsm / bodegas-moviles</text>
+
+  <!-- Barra lateral -->
+  <rect x="90" y="140" width="72" height="570" rx="18" fill="#1a1a1a"/>
+  <rect x="108" y="162" width="36" height="36" rx="10" fill="#c6f432"/>
+  <rect x="108" y="222" width="36" height="36" rx="10" fill="#2a2a2a"/>
+  <rect x="108" y="282" width="36" height="36" rx="10" fill="#2a2a2a"/>
+  <rect x="108" y="342" width="36" height="36" rx="10" fill="#2a2a2a"/>
+  <rect x="108" y="402" width="36" height="36" rx="10" fill="#2a2a2a"/>
+
+  <!-- KPIs -->
+  <g>
+    <rect x="186" y="140" width="290" height="110" rx="18" fill="#1a1a1a"/>
+    <text x="210" y="178" fill="#8a8a86" font-size="15">Bodegas móviles</text>
+    <text x="210" y="226" fill="#f7f7f5" font-size="40" font-weight="700">24</text>
+    <rect x="390" y="200" width="62" height="26" rx="13" fill="#c6f432"/>
+    <text x="421" y="218" fill="#0b0b0b" font-size="13" font-weight="700" text-anchor="middle">+3</text>
+
+    <rect x="492" y="140" width="290" height="110" rx="18" fill="#1a1a1a"/>
+    <text x="516" y="178" fill="#8a8a86" font-size="15">Técnicos en campo</text>
+    <text x="516" y="226" fill="#f7f7f5" font-size="40" font-weight="700">18</text>
+
+    <rect x="798" y="140" width="312" height="110" rx="18" fill="#1a1a1a"/>
+    <text x="822" y="178" fill="#8a8a86" font-size="15">Órdenes de servicio</text>
+    <text x="822" y="226" fill="#f7f7f5" font-size="40" font-weight="700">57</text>
+    <path d="M960 225 L990 205 L1015 215 L1045 190 L1085 198" fill="none" stroke="#c6f432" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Mapa de rutas -->
+  <rect x="186" y="270" width="560" height="440" rx="18" fill="#101010"/>
+  <rect x="186" y="270" width="560" height="440" rx="18" fill="url(#ims-grid)"/>
+  <path d="M230 640 C320 560 300 470 400 440 S560 470 600 380 S690 320 710 300" fill="none" stroke="#c6f432" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path d="M240 330 C330 360 380 330 460 360 S600 560 700 600" fill="none" stroke="#5a5a56" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <g>
+    <circle cx="400" cy="440" r="26" fill="#c6f432" opacity="0.18"/>
+    <circle cx="400" cy="440" r="12" fill="#c6f432"/>
+    <circle cx="600" cy="380" r="10" fill="#f7f7f5"/>
+    <circle cx="460" cy="360" r="10" fill="#f7f7f5"/>
+    <circle cx="700" cy="600" r="10" fill="#f7f7f5"/>
+    <circle cx="230" cy="640" r="10" fill="#8a8a86"/>
+  </g>
+  <!-- Vehiculo -->
+  <g transform="translate(372 384)">
+    <rect width="56" height="30" rx="8" fill="#f7f7f5"/>
+    <rect x="34" y="6" width="16" height="10" rx="3" fill="#0b0b0b"/>
+    <circle cx="14" cy="32" r="6" fill="#0b0b0b" stroke="#f7f7f5" stroke-width="3"/>
+    <circle cx="44" cy="32" r="6" fill="#0b0b0b" stroke="#f7f7f5" stroke-width="3"/>
+  </g>
+
+  <!-- Tabla de inventario -->
+  <rect x="762" y="270" width="348" height="440" rx="18" fill="#1a1a1a"/>
+  <text x="786" y="308" fill="#f7f7f5" font-size="18" font-weight="700">Inventario asignado</text>
+  <g font-size="14">
+    <rect x="786" y="330" width="300" height="56" rx="12" fill="#222"/>
+    <text x="804" y="363" fill="#f7f7f5">ONT GPON</text>
+    <text x="1068" y="363" fill="#c6f432" text-anchor="end" font-weight="700">128</text>
+
+    <rect x="786" y="398" width="300" height="56" rx="12" fill="#222"/>
+    <text x="804" y="431" fill="#f7f7f5">Router Wi-Fi 6</text>
+    <text x="1068" y="431" fill="#f7f7f5" text-anchor="end" font-weight="700">76</text>
+
+    <rect x="786" y="466" width="300" height="56" rx="12" fill="#222"/>
+    <text x="804" y="499" fill="#f7f7f5">Cable drop (m)</text>
+    <text x="1068" y="499" fill="#f7f7f5" text-anchor="end" font-weight="700">4.2k</text>
+
+    <rect x="786" y="534" width="300" height="56" rx="12" fill="#222"/>
+    <text x="804" y="567" fill="#f7f7f5">Decodificador</text>
+    <text x="1068" y="567" fill="#e5484d" text-anchor="end" font-weight="700">9</text>
+  </g>
+  <rect x="786" y="618" width="300" height="64" rx="32" fill="#c6f432"/>
+  <text x="936" y="657" fill="#0b0b0b" font-size="16" font-weight="700" text-anchor="middle">Transferir stock</text>
+</svg>
